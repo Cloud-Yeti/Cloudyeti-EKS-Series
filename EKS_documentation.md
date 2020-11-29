@@ -16,7 +16,7 @@
   eksctl create cluster --version=1.16 --name=eks-cluster  --managed --nodes=2 --alb-ingress-access --region=${AWS_REGION} --node-labels="lifecycle=OnDemand,intent=control-apps" --asg-access
   ```
   ```sh
-  Note: you can add flags like (--ssh-public-key <key-pairname>) to ssh into kubernetes nodes (--vpc-cidr <>) to create cluster in existing vpc, etc) as per your usecase.
+  Note: you can add flags like (--ssh-public-key <key-pairname>) to ssh into kubernetes nodes (--vpc-cidr <>) to create cluster in existing vpc, etc as per your usecase.
   ```
      Another common way of managing cluster that you may see is using the yml config file. 
     
