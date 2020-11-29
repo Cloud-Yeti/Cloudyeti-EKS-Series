@@ -4,8 +4,10 @@
 
 ## Getting Started
 
-#### Prerequisties for following lab
+#### Prerequisites for following lab
   * aws cli (version 1.16.156 or greater)
+    * dependency for eksctl
+      * required python and python pip
   * eksctl
     * for setting up EKS Cluster
   * kubectl 
