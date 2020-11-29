@@ -19,4 +19,5 @@
   Note: you can add flags like (--ssh-public-key <key-pairname>) --vpc-cidr <>, etc) as per your usecase.
   ```
     * Another common way of managing cluster that you may see is using the yml config file. 
-      * https://eksctl.io/usage/creating-and-managing-clusters/
+    
+   * https://eksctl.io/usage/creating-and-managing-clusters/
