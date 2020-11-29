@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wordpress
+  template:
+    metadata:
+      labels:
+        app: wordpress
+    spec:
+      containers:
+        - name: wordpress
+          image: <ecr repo endpoint>
+          imagePullPolicy: Always
+          env:
+          - name: WAIT_HOSTS
+            value: <database_endpoint>
+          - name: WAIT_HOSTS_TIMEOUT
+            value: "300"
+          - name: WAIT_SLEEP_INTERVAL
+            value: "30"
+          - name: WAIT_HOST_CONNECT_TIMEOUT
+            value: "30"
+      ports:
+        - containerPort: 80
