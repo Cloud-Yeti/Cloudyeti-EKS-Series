@@ -1,8 +1,8 @@
 # Cloudyeti-EKS-Series
 
-### [EKS Architecture and Documentation](https://github.com/Cloud-Yeti/Cloudyeti-EKS-Series/blob/main/EKS_documentation.md)
-### [Kubernetes Concepts](https://github.com/Cloud-Yeti/Cloudyeti-EKS-Series/blob/main/concept.md)
-
+#### [EKS Architecture and Documentation](https://github.com/Cloud-Yeti/Cloudyeti-EKS-Series/blob/main/EKS_documentation.md)
+#### [Kubernetes Concepts](https://github.com/Cloud-Yeti/Cloudyeti-EKS-Series/blob/main/concept.md)
+#### [Kubectl Frequently Used Commands](https://github.com/Cloud-Yeti/Cloudyeti-EKS-Series/blob/main/kubectl_commands.md)
 ## Getting Started
 
 #### Prerequisites for following lab
