@@ -1,6 +1,6 @@
 # Cloudyeti-EKS-Series
 
-### [EKS Architecture and Documentation]
+### [EKS Architecture and Documentation](https://github.com/Cloud-Yeti/Cloudyeti-EKS-Series/blob/main/EKS_documentation.md)
 
 ## Getting Started
 
