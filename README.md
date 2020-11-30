@@ -16,3 +16,6 @@
   * kubectl 
     * for interaction with K8s API Server
     * https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
+
+
+#### [Managing Users and RBAC in EKS](https://github.com/Cloud-Yeti/Cloudyeti-EKS-Series/blob/main/managing_users_and_RBAC.md)
