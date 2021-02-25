@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: wordpress
-          image: <ecr repo endpoint>
+          image: 
           imagePullPolicy: Always
           env:
           - name: WAIT_HOSTS
