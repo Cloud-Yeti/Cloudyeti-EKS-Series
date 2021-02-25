@@ -11,9 +11,9 @@
   ```sh
   eksctl create cluster --help
   ```
-  * Similarly we are using this for this lab. By default you will be m5.large instances using this utility. And will create it in a new VPC. So, you can make tweaks as per your need
+  * Similarly we are using this for this lab. By default you will be m5.large instances using this utility. You can similarly create tweaks in terms of naming your own subnets using (--vpc-public-subnets,--vpc-private-subnets flag).
   ```sh
-  eksctl create cluster --version=1.16 --name=eks-cluster  --managed --nodes=2 --alb-ingress-access --region=${AWS_REGION} --node-labels="lifecycle=OnDemand,intent=control-apps" --asg-access
+  eksctl create cluster --version=1.18 --name=eks-cluster  --managed --nodes=2 --alb-ingress-access --region=${AWS_REGION} --node-labels="lifecycle=OnDemand,intent=control-apps" --asg-access --ssh-access --node-type t2.micro --tags "project=cloudyeti-eks"
   ```
   ```sh
   Note: you can add flags like (--ssh-public-key <key-pairname>) to ssh into kubernetes nodes (--vpc-cidr <>) to create cluster in existing vpc, etc as per your usecase.

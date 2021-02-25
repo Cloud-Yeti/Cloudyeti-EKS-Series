@@ -1,0 +1,7 @@
+Makefile
+k8s_files/deployment-wordpress.yml
+k8s_files/service-wordpress.yml
+mariadb
+wordpress
+default.env
+docker-compose.yml
