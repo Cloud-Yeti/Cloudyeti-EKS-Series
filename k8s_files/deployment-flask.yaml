@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cloudyeti-grafana
+  name: cloudyeti-flask
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cloudyeti-grafana
+      app: cloudyeti-flask
   template:
     metadata:
       labels:
-        app: cloudyeti-grafana
+        app: cloudyeti-flask
     spec:
       containers:
-        - name: grafana
-          image: grafana/grafana
+        - name: cloudyeti-flask
+          image: rbngtm1/cloudyeti-flask
           imagePullPolicy: Always
           ports:
-            - containerPort: 3000
+            - containerPort: 5000
