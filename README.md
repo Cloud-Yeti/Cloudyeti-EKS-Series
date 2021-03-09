@@ -17,7 +17,5 @@
     * for interaction with K8s API Server
     * https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
 
-#### [EKS_Concepts and Components](https://github.com/Cloud-Yeti/Cloudyeti-EKS-Series/blob/main/concept.md)
-
 #### [Steps to follow](https://github.com/Cloud-Yeti/Cloudyeti-EKS-Series/blob/main/Steps_to_take.md)
 
