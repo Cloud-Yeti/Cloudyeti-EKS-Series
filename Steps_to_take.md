@@ -5,10 +5,16 @@
 ### You can see the status of EKS cluster in EKS management console
 ![3](https://github.com/Cloud-Yeti/Cloudyeti-EKS-Series/blob/main/Images/3.png) <br />
 ### If you have different EKS cluster, you can switch back and forth between the EKS cluster using Kubernetes context
+```
+aws eks --region us-east-1 update-kubeconfig  --name eks-cluster
+```
 ![4](https://github.com/Cloud-Yeti/Cloudyeti-EKS-Series/blob/main/Images/4.png) <br />
 ### Easy way to spin up applications in EKS Cluster
 ![5](https://github.com/Cloud-Yeti/Cloudyeti-EKS-Series/blob/main/Images/5.png) <br />
 ### NodePort can be used for local development, but it's not recommended for production workloads
+``` 
+Now open ExternalIpPort:Nodeport on the browser. In the below example -> 3.21.12.58:30301
+```
 ![6](https://github.com/Cloud-Yeti/Cloudyeti-EKS-Series/blob/main/Images/6.png) <br />
 ### To see the application in UI, we need to open 30301 on security group which is NodePort security group that we have specified on service manifest file
 ![7](https://github.com/Cloud-Yeti/Cloudyeti-EKS-Series/blob/main/Images/7.png) <br />
@@ -24,6 +30,7 @@
 ![12](https://github.com/Cloud-Yeti/Cloudyeti-EKS-Series/blob/main/Images/12.png) <br />
 ### Now, you can see our application is brought back with the same load balancer endpoint. 
 ![13](https://github.com/Cloud-Yeti/Cloudyeti-EKS-Series/blob/main/Images/13.png) <br />
+### [Managing Users and RBAC in EKS](https://github.com/Cloud-Yeti/Cloudyeti-EKS-Series/blob/main/managing_users_and_RBAC.md) <br />
 ### Let's not forget to bring down the cluster to save our bills after workshop
 ![14](https://github.com/Cloud-Yeti/Cloudyeti-EKS-Series/blob/main/Images/14.png) <br />
 ### You can see, the cloudformation stack get's deleted, which deletes every resources including EKS Cluster, launch template, security groups, IAM, etc.

@@ -53,4 +53,54 @@
   * Once your EKS cluster is ready, you get an API endpoint and you’d use Kubectl, community developed tool to interact with your cluster.
 #### Install eksctl
   * https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html
-  
+
+#### Components
+
+```
+Components: 
+
+
+Worker node is the one that does all the heavy lifting for us like: 
+It includes container run time eg docker, containerd, etc
+Kubelet: 
+ * interacts with both container and node
+ * starts the pod, inside of which we have the container
+
+Kube proxy: forwards the request
+
+Master node Components: basically does  management task ( control plane) 
+
+ApiServer: acts as a gatekeeper, is an entrypoint to k8s cluster
+
+Scheduler: is intelligent enough to decide where to put the pod on which node.
+         : It sees how much resources does the application needs like (CPU’s, RAM’s, etc)
+
+Controller Manager: detects the cluster state changes. (eg. crashing of the pods)
+
+Etcd ( also known as cluster brain ): 
+     *  stores the cluster changes and are stored in the key value store
+     * is a distributed storage system based on raft algorithm.
+
+```  
+
+#### Besides the master and worker components, the most know componets includes
+
+```
+Pod: smallest unit of deployment
+Deployments: specification of application lifecycle, includes things like replicas, images, and environment variables
+Service: specification for exposing service to outside of the EKS cluster
+```
+
+#### Furthermore, we have more interesting concepts to deploy application with different "kind" specification
+```
+Replicaset: Can be specified as part of deployment manifest file. It includes the copy of pods.
+Volumes: Persistent Volumes and Persistent Volumes Claim
+  * Preserve data even if the pod crashes. https://kubernetes.io/docs/concepts/storage/persistent-volumes/
+  * Persistent Volume Claim (request for storage, which is met by binding the PVC to a persistent volume.)
+  * Storage Classes: integrate with cloud providers storage volume system.
+Configmaps: store parameters, but are encrypted
+Secrets: similar to configmaps, but are base64 encoded
+DaemonSet: ensures that all (or some) nodes run a copy of a pod. As nodes are added, pods are added. As nodes are removed, pods are garbage collected
+Statefulset: suitable for stateful applications or databases
+namespace: helps in creating multiple virtual clusters backed by the same physical cluster.
+```

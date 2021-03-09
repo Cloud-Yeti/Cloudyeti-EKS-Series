@@ -1,6 +1,6 @@
 ## Managing access to multiple users using configmap
 
-* aws eks --region us-east-1 update-kubeconfig  --name eks-eksctl-ors  # this command updates your context as well as ~/.kube/config
+* aws eks --region us-east-1 update-kubeconfig  --name eks-cluster  # this command updates your context as well as ~/.kube/config
 * with the above command you will receive the config map rules. You can include append the user to whom you want to give access appending mapUsers in the yaml; see below example
 * kubectl edit configmap aws-auth -n kube-system   # Append the mapUsers line below and save it
 ```yml
