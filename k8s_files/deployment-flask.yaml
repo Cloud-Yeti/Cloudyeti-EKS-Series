@@ -1,8 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cloudyeti-flask
-  namespace: default
+  name: cloudyeti-flask-deployment
 spec:
   replicas: 1
   selector:
