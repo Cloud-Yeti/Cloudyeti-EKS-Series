@@ -15,6 +15,5 @@ spec:
       containers:
         - name: cloudyeti-flask
           image: rbngtm1/cloudyeti-flask
-          imagePullPolicy: Always
           ports:
             - containerPort: 5000
